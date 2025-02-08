@@ -19,6 +19,7 @@ namespace Web.Crontrollers
             _servicio = personajeService;
         }
 
+
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Personaje>>> Get()
         {
@@ -27,6 +28,24 @@ namespace Web.Crontrollers
 
             return Ok(Personajes);
         }
+
+        [HttpGet("{id}")]
+public async Task<ActionResult<Personaje>> Get(int id)
+{
+    try
+    {
+        var personaje = await _servicio.GetById(id);
+        if (personaje == null)
+        {
+            return NotFound();
+        }
+        return Ok(personaje);
+    }
+    catch (Exception ex)
+    {
+        return StatusCode(500, $"Error interno del servidor: {ex.Message}");
+    }
+}
 
 
         // POST api/<PersonajeController>
