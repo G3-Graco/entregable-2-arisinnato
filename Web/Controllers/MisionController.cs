@@ -60,7 +60,7 @@ namespace Api.Controllers
             return NoContent();
         }
 
-        // POST: api/Mision/5/Aceptar
+        
         [HttpPost("{id}/Aceptar")]
         public ActionResult AceptarMision(int id)
         {
@@ -68,7 +68,7 @@ namespace Api.Controllers
             return Ok();
         }
 
-        // POST: api/Mision/5/Completar
+        
         [HttpPost("{id}/Completar")]
         public ActionResult CompletarMision(int id)
         {
@@ -76,7 +76,7 @@ namespace Api.Controllers
             return Ok();
         }
 
-        // POST: api/Mision/5/AgregarObjetivo
+        
         [HttpPost("{id}/AgregarObjetivo")]
         public ActionResult AgregarObjetivo(int id, [FromBody] string objetivo)
         {
@@ -84,7 +84,7 @@ namespace Api.Controllers
             return Ok();
         }
 
-        // POST: api/Mision/5/EliminarObjetivo
+        
         [HttpPost("{id}/EliminarObjetivo")]
         public ActionResult EliminarObjetivo(int id, [FromBody] string objetivo)
         {

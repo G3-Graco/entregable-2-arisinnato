@@ -30,10 +30,10 @@ namespace Web.Crontrollers
         }
 
         [HttpGet("{id}")]
-public async Task<ActionResult<Personaje>> Get(int id)
-{
-    try
+    public async Task<ActionResult<Personaje>> Get(int id)
     {
+         try
+    {   
         var personaje = await _servicio.GetById(id);
         if (personaje == null)
         {

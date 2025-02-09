@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Core.Entities;
 using Core.Interfaces.Services;
-using Services.Services;
 
 namespace Web.Controllers
 {
@@ -70,7 +69,6 @@ namespace Web.Controllers
             return Ok();
         }
 
-        // POST: api/Equipo/5/Desequipar/casco
         [HttpPost("{id}/Desequipar/{tipoObjeto}")]
         public ActionResult Desequipar(int id, string tipoObjeto)
         {
